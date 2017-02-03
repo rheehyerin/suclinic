@@ -1,0 +1,84 @@
+
+
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:    "Noto Sans KR", Helvetica, Arial, sans-serif !default;
+$font-family-serif:         Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:          1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:      inherit !default;
+$headings-font-weight:      500 !default;
+$headings-line-height:      1.1 !default;
+$headings-color:            inherit !default;
+
+
+$font-head-title:           32px !default;
+$font-title:                22px !default;
+$font-large-base:           20px !default;
+$font-base:                 16px !default;
+$font-small:                10px !default;
+
+
+$screen-xs:                  480px !default;
+$screen-pad:                 576px !default;
+$screen-sm:                  768px !default;
+$screen-md:                  992px !default;
+$screen-lg:                  1200px !default;
+$screen-lge:                 1480px !default;
+$screen-extralg:             1872px !default;
+
+
+
+@mixin responsive($width) {
+	/* 화면 크기 1872 이상 일때, 고해상도 노트북 이상 일 때 설정*/
+	@if $width == extralg {
+		@media screen and (min-width: $screen-extralg) {
+		  @content;
+	  };
+	}
+	/* 화면 크기 1480~1871 일때, 고해상도 노트북 ~ 노트북 사이 이상 일 때 설정*/
+	@else if $width == lge {
+		@media screen and (min-width: $screen-lge) {
+		@content;};
+	}
+	/* 화면 크기 1200~1479 일때, 고해상도 노트북 ~ 노트북 사이 이상 일 때 설정*/
+	@else if $width == lg {
+		@media screen and (min-width: $screen-lg) {
+		@content;};
+	}
+	/* 화면 크기 992~1199 일때, 일반 적인 모니터 설정*/
+	@else if $width == md  {
+		@media screen and (min-width: $screen-md) {
+		@content;};
+	}
+	/* 화면 크기 768~991 일때, PAD 설정*/
+	@else if $width == sm {
+		@media screen and (min-width: $screen-sm)  {
+		@content;};
+	}
+	/* 화면 크기 576~767 일때, PAD 설정*/
+	@else if $width == pad {
+		@media screen and (min-width: $screen-pad)  {
+		@content;};
+	}
+	/* 화면 크기 575이하 일때, 폰 설정*/
+	@else if $width == xs {
+		@media screen and (max-width: $screen-xs) {
+		@content;};
+	}
+	/* 화면 크기 575이하 일때, 폰 설정*/
+	@else if $width == undersm {
+		@media screen and (max-width: $screen-sm - 1) {
+		@content;};
+	}
+}
+
+
+
+@import "base.scss";

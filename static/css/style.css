@@ -1,0 +1,46 @@
+html, body {
+  width: 100%; }
+
+.no-padding {
+  padding: 0; }
+
+.no-padding-l {
+  padding: 0; }
+
+.no-padding-r {
+  padding: 0; }
+
+.no-padding-lr {
+  padding: 0; }
+
+.no-padding-t {
+  padding: 0; }
+
+.no-padding-b {
+  padding: 0; }
+
+.no-padding-tb {
+  padding: 0; }
+
+.margintop30 {
+  margin-top: 30px; }
+
+.margintop50 {
+  margin-top: 50px; }
+
+.margintop60 {
+  margin-top: 60px; }
+
+.margintop80 {
+  margin-top: 80px; }
+
+.marginauto {
+  margin-left: auto;
+  margin-right: auto; }
+
+.main div {
+  padding: 0px; }
+.main img {
+  padding: 0px; }
+
+/*# sourceMappingURL=style.css.map */
