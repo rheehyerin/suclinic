@@ -1,8 +1,6 @@
 from .settings import *
 
-from .settings import *
-
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
