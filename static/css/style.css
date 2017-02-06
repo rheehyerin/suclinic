@@ -41,6 +41,11 @@ html, body {
 .bgcolorblk {
   background-color: #565656; }
 
+.img-responsive.minmax {
+  min-width: 100%;
+  position: relative;
+  min-height: 1px; }
+
 .main div {
   padding: 0px; }
 .main img {

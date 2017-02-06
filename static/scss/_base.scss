@@ -54,6 +54,12 @@ html, body{
 	background-color:$footer-bg;
 }
 
+.img-responsive.minmax {
+		min-width: 100%;
+		position: relative;
+		min-height: 1px;
+	}
+
 .main{
 	div{
 		padding:0px;
