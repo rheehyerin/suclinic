@@ -12,6 +12,8 @@ $line-height-base:          1.428571429 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 
 //** By default, this inherits from the `<body>`.
+$footer-bg : rgb(86, 86, 86);
+
 $headings-font-family:      inherit !default;
 $headings-font-weight:      500 !default;
 $headings-line-height:      1.1 !default;

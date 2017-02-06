@@ -38,9 +38,17 @@ html, body {
   margin-left: auto;
   margin-right: auto; }
 
+.bgcolorblk {
+  background-color: #565656; }
+
 .main div {
   padding: 0px; }
 .main img {
   padding: 0px; }
+
+footer ul {
+  padding: 0px;
+  list-style-type: none;
+  display: inline; }
 
 /*# sourceMappingURL=style.css.map */

@@ -50,11 +50,23 @@ html, body{
 	margin-right:auto;
 }
 
+.bgcolorblk{
+	background-color:$footer-bg;
+}
+
 .main{
 	div{
 		padding:0px;
 	}
 	img{
 		padding:0px;
+	}
+}
+
+footer{
+	ul{
+		padding:0px;
+		list-style-type:none;
+		display:inline;
 	}
 }
