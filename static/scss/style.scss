@@ -1,24 +1,4 @@
-
-
-//## Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif:    "Noto Sans KR", Helvetica, Arial, sans-serif !default;
-$font-family-serif:         Georgia, "Times New Roman", Times, serif !default;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
-
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base:          1.428571429 !default; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-
-//** By default, this inherits from the `<body>`.
-$footer-bg : rgb(86, 86, 86);
-
-$headings-font-family:      inherit !default;
-$headings-font-weight:      500 !default;
-$headings-line-height:      1.1 !default;
-$headings-color:            inherit !default;
-
+@import "variables.scss";
 
 $font-head-title:           32px !default;
 $font-title:                22px !default;
@@ -26,15 +6,12 @@ $font-large-base:           20px !default;
 $font-base:                 16px !default;
 $font-small:                10px !default;
 
-
-$screen-xs:                  480px !default;
 $screen-pad:                 576px !default;
-$screen-sm:                  768px !default;
-$screen-md:                  992px !default;
-$screen-lg:                  1200px !default;
 $screen-lge:                 1480px !default;
 $screen-extralg:             1872px !default;
 
+$footer-bg: #565656;
+$right-side-bg: #333333;
 
 
 @mixin responsive($width) {
@@ -84,3 +61,5 @@ $screen-extralg:             1872px !default;
 
 
 @import "base.scss";
+@import "main.scss";
+@import "sidebar.scss";
