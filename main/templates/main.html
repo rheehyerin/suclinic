@@ -5,23 +5,29 @@
 
 <div class="container-fluid main" style="padding:0px;">
 	<div class="row">
-		<div class="col-md-42 col-sm-42">
-			<div class="col-md-42 col-sm-42 " style="width: 69.37%;">
+		<div class="col-sm-42 col-xs-42">
+			<div class="col-sm-42 col-xs-42 md69">
         {% include 'main_imgslider2.html' %}
     	</div>
 
-			<div class="col-md-42 col-sm-42 " style="width: 30.63%">
-				<img src="{% static 'img/main/visual4.jpg' %}" class="img-responsive minmax">
+			<div class="col-sm-42 md30 hidden-xs">
+				<img src="{% static 'img/main/visual4.jpeg' %}" class="img-responsive minmax">
 			</div>
 		</div>
-		<div class="col-md-42 col-sm-42">
-			<div class="col-md-42" style="width: 69.37%">
-				<img src="{% static 'img/main/visual5.jpg' %}" class="img-responsive col-md-14 col-sm-14">
-				<img src="{% static 'img/main/visual6.jpg' %}" class="img-responsive col-md-14 col-sm-14">
-				<img src="{% static 'img/main/visual7.jpg' %}" class="img-responsive col-md-14 col-sm-14">
+		<div class="col-sm-42 col-xs-42">
+			<div class="col-sm-42 md69">
+				<img src="{% static 'img/main/visual5.jpg' %}" class="img-responsive col-sm-14 col-xs-14">
+				<img src="{% static 'img/main/visual6.jpg' %}" class="img-responsive col-sm-14 col-xs-14">
+				<img src="{% static 'img/main/visual7.jpg' %}" class="img-responsive col-sm-14 col-xs-14">
 			</div>
-			<div class="col-md-42 col-sm-42" style="width: 30.63%">
+			<div class="col-xs-42 visible-xs" style="display:none;">
+				<img src="{% static 'img/main/visual4_s.jpeg' %}" class="img-responsive">
+			</div>
+			<div class="col-sm-42 hidden-xs md30">
 				{% include 'main_imgslider3.html' %}
+			</div>
+			<div class="col-xs-42 visible-xs" style="display: none;">
+				{% include 'main_imgslider4.html' %}
 			</div>
 		</div>
 	</div>
