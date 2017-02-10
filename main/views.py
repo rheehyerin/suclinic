@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
 
 def main(request):
     return render(request, "main.html")
+
+
+def whitening(request):
+    return render(request, "whitening.html")
