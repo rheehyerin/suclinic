@@ -50,6 +50,19 @@ html, body {
 .bgcolorblk {
   background-color: #565656; }
 
+.content-title {
+  text-align: center; }
+  .content-title .semi_title {
+    font-size: 35pt; }
+  .content-title .sub_title {
+    font-size: 13pt; }
+
+.content-border {
+  border-top: 3px solid black;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray; }
+
 .img-responsive.minmax {
   min-width: 100%;
   position: relative;

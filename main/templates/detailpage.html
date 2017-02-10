@@ -2,26 +2,26 @@
 
 {% block content %}
 <div class="container-fluid">
-	<div class="col-sm-38 col-sm-offset-2 col-xs-42" style="border-bottom: 3px solid black; text-align: center; margin-top: 50px;">
-		<div style="font-size: 35pt;">
+	<div class="col-sm-38 col-sm-offset-2 col-xs-42 content-title margintop50">
+		<div class="semi_title">
 		{% block semi_title %}{% endblock %}
 		</div>
-		<div style="font-size: 13pt;margin-bottom: 30px;">
-		기미/잡티/화이트닝
+		<div class="sub_title marginb30">
+		{% block sub_title %}{% endblock %}
 		</div>
 	</div>
 
-	<div class="col-sm-38 col-sm-offset-2 col-xs-42" style="border-left: 1px solid lightgray; border-right: 1px solid lightgray;">
+	<div class="col-sm-38 col-sm-offset-2 col-xs-42 content-border marginb60">
 		<div class="row hidden-xs margintop60 marginb60">
 		{% block main %} {% endblock %}
 		</div>
 		<div class="row visible-xs margintop60 marginb60">
 		{% block mainsm %} {% endblock %}
 		</div>
-		<div class="row hidden-xs margintop60 marginb60">
+		<div class="row hidden-xs margintop60 ">
 		{% block detail %} {% endblock %}
 		</div>
-		<div class="row visible-xs margintop60 marginb60">
+		<div class="row visible-xs margintop60">
 		{% block detailsm %} {% endblock %}
 		</div>
 

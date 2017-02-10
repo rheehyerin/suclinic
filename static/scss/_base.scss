@@ -66,6 +66,23 @@ html, body{
 	background-color: $footer-bg;
 }
 
+.content-title{
+	text-align:center;
+	.semi_title{
+		font-size:35pt;
+	}
+	.sub_title{
+		font-size:13pt;
+	}
+}
+
+.content-border{
+	border-top:3px solid black;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	border-bottom:1px solid lightgray;
+}
+
 .img-responsive.minmax {
 		min-width: 100%;
 		position: relative;
