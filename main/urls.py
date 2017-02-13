@@ -19,5 +19,6 @@ urlpatterns = [
     url(r'^prp/$', views.prp, name="prp"),
     url(r'^tera/$', views.tera, name="tera"),
 
+    url(r'^map/$', views.map, name="targeting"),
     url(r'^$', views.main, name="main"),
 ]
