@@ -45,15 +45,15 @@ html, body{
 	margin-top: 80px;
 }
 
-.marginb30{
+.marginbottom30{
 	margin-bottom:30px;
 }
 
-.marginb60{
+.marginbottom60{
 	margin-bottom:60px;
 }
 
-.marginb80{
+.marginbottom80{
 	margin-bottom:80px;
 }
 
@@ -61,6 +61,41 @@ html, body{
 	margin-left:auto;
 	margin-right:auto;
 }
+
+.paddingtop30{
+	padding-top:30px;
+}
+
+.paddingtop40{
+	padding-top:40px;
+}
+
+.paddingtop50{
+	padding-top:50px;
+}
+
+.paddingtop60{
+	padding-top:60px;
+}
+
+.paddingbottom30{
+	padding-bottom:30px;
+}
+
+.paddingbottom40{
+	padding-bottom:40px;
+}
+
+
+.paddingbottom50{
+	padding-bottom:50px;
+}
+
+
+.paddingbottom60{
+	padding-bottom:60px;
+}
+
 
 .no-padding-xs{
 	@media (max-width:767px){
@@ -88,6 +123,32 @@ html, body{
 	.margintop10-xs{
 		margin-top:10px;
 	}
+
+	.paddingtop30, .paddingtop40, .paddingtop50, .paddingtop60{
+		padding-top:0px;
+	}
+	.paddingbottom30, .paddingbottom40, .paddingbottom50, .paddingbottom60{
+		padding-bottom:0px;
+	}
+	.paddingtop30-xs{
+		padding-top:30px
+	}
+	.paddingtop20-xs{
+		padding-top:20px
+	}
+	.paddingtop10-xs{
+		padding-top:10px
+	}
+	.paddingbottom30-xs{
+		padding-bottom:30px;
+	}
+	.paddingbottom20-xs{
+		padding-bottom:20px;
+	}
+	.paddingbottom10-xs{
+		padding-bottom:10px;
+	}
+
 }
 
 .img-responsive.minmax {
@@ -117,9 +178,21 @@ html, body{
 		}
 	}
 }
-
 .content-border{
-	border-top:3px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	border-bottom:1px solid lightgray;
+}
+
+.content-border1{
+	border-top: 3px solid black;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	border-bottom:1px solid lightgray;
+}
+.content-border2{
+
 	border-left: 1px solid lightgray;
 	border-right: 1px solid lightgray;
 	border-bottom:1px solid lightgray;
