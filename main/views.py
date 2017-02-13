@@ -102,5 +102,5 @@ def slim(request):
     return render(request, "obesity/slim.html")
 
 def map(request):
-    return render(request, "map.html")
+    return render(request, "map.html", {'map': True})
 

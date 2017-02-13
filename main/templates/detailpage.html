@@ -18,9 +18,11 @@
 		<div class="row visible-xs">
 		{% block mainsm %} {% endblock %}
 		</div>
-		<div class="row margintop30">
-		{% block common %} {% endblock %}
-		</div>
+		{% if map %}
+			<div class="row margintop30">
+			{% block common %} {% endblock %}
+			</div>
+		{% endif %}
 		<div class="row hidden-xs marginbottom60">
 		{% block detail %} {% endblock %}
 		</div>
