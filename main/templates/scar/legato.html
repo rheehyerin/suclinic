@@ -1,27 +1,31 @@
-{% extends "../detailpage.html" %}
+{% extends "base.html" %}
 {% load staticfiles %}
 
-{% block semi_title %}
-레가토
-{% endblock %}
+{% block content %}
+<div class="container-fluid no-padding-xs">
+	<div class="col-lg-42 col-lg-offset-0 col-sm-38 col-sm-offset-2 col-xs-42 content-title margintop50 margintop10-xs">
+		<div class="semi_title">
+		레가토
+		</div>
+		<div class="sub_title marginb30">
+		HOME > 흉터/모공/튼살 > 레가토
+		</div>
+	</div>
 
-{% block sub_title %}
-HOME > 흉터/모공/튼살 > 레가토
-{% endblock %}
+	<div class="col-lg-28 col-lg-offset-7 col-sm-38 col-sm-offset-2 col-xs-42 content-border marginb60">
+		<div class="row hidden-xs margintop60 marginb60">
+		<img src="{% static 'img/scar/legato1.jpg' %}" class="img-responsive">
+		</div>
+		<div class="row visible-xs margintop30-xs marginb15">
+		<img src="{% static 'img/scar/legato1s.jpg' %}" class="img-responsive">
+		</div>
+		<div class="row hidden-xs margintop60 ">
+		<img src="{% static 'img/scar/legato2.jpg' %}" class="img-responsive">
+		</div>
+		<div class="row visible-xs margintop20-xs">
+		<img src="{% static 'img/scar/legato2s.jpg' %}" class="img-responsive">
+		</div>
 
-{% block main %}
-	<img src="{% static 'img/scar/legato1.jpg' %}" class="img-responsive">
-{% endblock %}
-
-{% block mainsm %}
-	<img src="{% static 'img/scar/legato1s.jpg' %}" class="img-responsive">
-{% endblock %}
-
-
-{% block detail %}
-	<img src="{% static 'img/scar/legato2.jpg' %}" class="img-responsive">
-{% endblock %}
-
-{% block detailsm %}
-	<img src="{% static 'img/scar/legato2s.jpg' %}" class="img-responsive">
-{% endblock %}
+	</div>
+</div>
+{% endblock content %}
