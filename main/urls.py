@@ -19,5 +19,17 @@ urlpatterns = [
     url(r'^prp/$', views.prp, name="prp"),
     url(r'^tera/$', views.tera, name="tera"),
 
+    # botox #
+    # url(r'^botox/$', views.botox, name="botox"),
+    # url(r'^filler/$', views.filler, name="filler"),
+
+    # petit #
+
+    # contour #
+
+    # pimple #
+
+    # obesity #
+
     url(r'^$', views.main, name="main"),
 ]

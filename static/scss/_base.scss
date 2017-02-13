@@ -69,6 +69,27 @@ html, body{
 	}
 }
 
+@media (max-width:767px){
+	.margintop30, .margintop50, .margintop60, .margintop80{
+		margin-top:0px;
+	}
+	.margintop50-xs{
+		margin-top:20px;
+	}
+	.margintop30-xs{
+		margin-top:30px;
+	}
+	.margintop40-xs{
+		margin-top:40px;
+	}
+	.margintop20-xs{
+		margin-top:20px;
+	}
+	.margintop10-xs{
+		margin-top:10px;
+	}
+}
+
 .img-responsive.minmax {
 	min-width: 100%;
 	position: relative;
@@ -86,6 +107,14 @@ html, body{
 	}
 	.sub_title{
 		font-size:13pt;
+	}
+	@include responsive(xs){
+		.semi_title{
+			font-size:23pt;
+		}
+		.sub_title{
+			font-size:9pt;
+		}
 	}
 }
 
