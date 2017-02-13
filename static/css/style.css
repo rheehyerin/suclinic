@@ -47,6 +47,16 @@ html, body {
   margin-left: auto;
   margin-right: auto; }
 
+@media (max-width: 767px) {
+  .no-padding-xs {
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+.img-responsive.minmax {
+  min-width: 100%;
+  position: relative;
+  min-height: 1px; }
+
 .bgcolorblk {
   background-color: #565656; }
 
