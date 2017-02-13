@@ -1,0 +1,63 @@
+{% extends "detailpage.html" %}
+{% load staticfiles %}
+
+{% block semi_title %}
+오시는 길
+{% endblock %}
+
+{% block sub_title %}
+HOME > 병원 소개 > 오시는 길
+{% endblock %}
+
+{% block main %}
+	<img src="{% static 'img/map/title.jpg' %}" class="img-responsive minmax">
+{% endblock %}
+
+{% block mainsm %}
+	<img src="{% static 'img/map/subtitle.jpg' %}" class="img-responsive">
+{% endblock %}
+
+{% block common %}
+	<div id="map" style="width: 100%; height: 500px;"></div>
+{% endblock %}
+
+{% block detail %}
+	<img src="{% static 'img/map/big.jpeg' %}" class="img-responsive minmax">
+{% endblock %}
+
+{% block detailsm %}
+	<img src="{% static 'img/map/sm.jpeg' %}" class="img-responsive">
+{% endblock %}
+
+
+
+	{% block javascript %}
+	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=b6cb9aed09ee17536c16c0ee60773e3d"></script>
+	<script>
+	  // 지도 생성
+	  var container = document.getElementById('map');
+	  var options = {
+	  	center: new daum.maps.LatLng(37.556430, 126.940047),
+	  	level: 4
+	  };
+	  var map = new daum.maps.Map(container, options);
+
+	  // 마커 생성
+	  var marker = new daum.maps.Marker({
+	  	position: new daum.maps.LatLng(37.556430, 126.940047),
+	  });
+	  marker.setMap(map);
+	  // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+	  var mapTypeControl = new daum.maps.MapTypeControl();
+
+	  // daum.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+	  map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
+
+	  // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+	  var zoomControl = new daum.maps.ZoomControl();
+	  map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+	  // 스크롤로 지도 확대/축소를 불가능하게 막습니다.
+	  map.setZoomable(false);
+	</script>
+	{% endblock javascript %}

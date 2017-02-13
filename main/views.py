@@ -40,3 +40,6 @@ def tera(request):
     return render(request, "scar/tera.html")
 
 
+def map(request):
+    return render(request, "map.html")
+

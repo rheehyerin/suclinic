@@ -31,5 +31,7 @@ urlpatterns = [
 
     # obesity #
 
+    url(r'^map/$', views.map, name="map"),
+
     url(r'^$', views.main, name="main"),
 ]
