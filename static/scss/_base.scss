@@ -219,3 +219,26 @@ footer{
 		display:inline;
 	}
 }
+
+.left-navbar {
+	min-height: 1px;
+	float: left;
+}
+
+.base-center {
+	position: relative;
+	min-height: 1px;
+	width: 100%;
+	float: left;
+	@include responsive(md){
+		margin-left: 10.5%;
+		width: 86%;
+	}
+}
+
+.right-navbar {
+	position: relative;
+	min-height: 1px;
+	width: 3.5%;
+	float: left;
+}
