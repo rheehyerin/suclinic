@@ -12,7 +12,7 @@ $screen-extralg:             1872px !default;
 
 $footer-bg: #565656;
 $right-side-bg: #333333;
-
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 @mixin responsive($width) {
 	/* 화면 크기 1872 이상 일때, 고해상도 노트북 이상 일 때 설정*/
@@ -60,6 +60,7 @@ $right-side-bg: #333333;
 
 
 
+@import "sidebar1.scss";
 @import "base.scss";
 @import "main.scss";
 @import "sidebar.scss";

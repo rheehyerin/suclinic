@@ -1,0 +1,121 @@
+{% load staticfiles %}
+<div class="left-navbar nav-side-menu">
+	<div style="text-align: center;">
+		<button class="navbar-toggle" data-target="#menu-content" data-toggle="collapse" style="float: left; width: 30px;padding: 0; border: none; margin: 7px;">
+			<span class="sr-only">Menu</span>
+			<img src="{% static 'img/icon-bar.png' %}" class="img-responsive">
+		</button>
+		<div style="display: inline-block;">
+			<a href="./" class="brand no-padding">
+				<img src="{% static 'img/logo.png' %}" class="img-responsive">
+			</a>
+		</div>
+		<a href="tel:82+3027675" style="float: right; width: 30px; margin: 7px;">
+			<img src="{% static 'img/tel-icon.png' %}" class="img-responsive hidden-md hidden-lg">
+		</a>
+	</div>
+	<div class="menu-list">
+
+		<ul id="menu-content" class="menu-content collapse out">
+
+			<li data-toggle="collapse" data-target="#intro" class="collapsed">
+				<a href="#">병원 소개</a><span class="caret pull-right"></span>
+			</li>
+			<ul class="sub-menu collapse" id="intro">
+				<li>수클리닉소개</li>
+				<li>병원둘러보기</li>
+				<li>오시는길</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#whitening" class="collapsed">
+				<a href="#">기미/잡티/화이트닝<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="whitening">
+				<li>레이저토닝VRM4</li>
+				<li>미백레가또</li>
+				<li>타겟팅</li>
+				<li>백옥주사</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#peeling" class="collapsed">
+				<a href="#">필링/재생<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="peeling">
+				<li>스펙트라필</li>
+				<li>아쿠아필</li>
+				<li>연예인필(더말코드)</li>
+				<li>라떼필(스트롱,마일드)</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#scar" class="collapsed">
+				<a href="#">흉터/모공/튼살치료<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="scar">
+				<li>레가토</li>
+				<li>PRP(와이셀 바이오)</li>
+				<li>테라필</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#botox" class="collapsed">
+				<a href="#">필러/보톡스<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="botox">
+				<li>필러(이브아르,채움)</li>
+				<li>보톡스(메디톡신,보튤렉스)</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#young" class="collapsed">
+				<a href="#">쁘띠/동안시술<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="young">
+				<li>다크서클주사</li>
+				<li>콧볼축소</li>
+				<li>하이코</li>
+				<li>더마톡신</li>
+				<li>마녀주사</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#lifting" class="collapsed">
+				<a href="#">윤곽/리프팅<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="lifting">
+				<li>5단계 치료솔루션</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#pimple" class="collapsed">
+				<a href="#">여드름<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="pimple">
+				<li>더블로S</li>
+				<li>실리프팅(엔파인더스)</li>
+				<li>왕눈이리프팅</li>
+				<li>윤곽주사</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#fat" class="collapsed">
+				<a href="#">비만/체형관리<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="fat">
+				<li>냉동지방파괴쿨쉐이핑</li>
+				<li>지방분해주사</li>
+				<li>파워메조테라피</li>
+				<li>카복시</li>
+				<li>슬림주사</li>
+				<li>HPL</li>
+				<li>고주파</li>
+				<li>신데렐라주사</li>
+			</ul>
+
+			<li data-toggle="collapse" data-target="#community" class="collapsed">
+				<a href="#">커뮤니티<span class="caret"></span></a>
+			</li>
+			<ul class="sub-menu collapse" id="community">
+				<li>공지/이벤트</li>
+				<li>고객후기</li>
+				<li>온라인 상담</li>
+				<li>전후 사진</li>
+			</ul>
+
+		</ul>
+	</div>
+</div>
