@@ -95,6 +95,9 @@ def highfrequency(request):
 def hpl(request):
     return render(request, "obesity/hpl.html")
 
+def lipolysis(request):
+    return render(request, "obesity/lipolysis.html")
+
 def mesotherapie(request):
     return render(request, "obesity/mesotherapie.html")
 

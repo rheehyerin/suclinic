@@ -45,6 +45,7 @@ urlpatterns = [
     url(r'^coolshaping/$', views.coolshaping, name="coolshaping"),
     url(r'^highfrequency/$', views.highfrequency, name="highfrequency"),
     url(r'^hpl/$', views.hpl, name="hpl"),
+    url(r'^lipolysis/$', views.lipolysis, name="lipolysis"),
     url(r'^mesotherapie/$', views.mesotherapie, name="mesotherapie"),
     url(r'^slim/$', views.slim, name="slim"),
 
