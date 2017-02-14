@@ -1,6 +1,7 @@
 html, body{
 	width:100%;
 }
+/* no padding */
 .no-padding {
 	padding: 0;
 }
@@ -29,6 +30,14 @@ html, body{
 	padding: 0;
 }
 
+.no-padding-xs{
+	@media (max-width:767px){
+		padding-left:0px;
+		padding-right:0px;
+	}
+}
+
+/* marig top */
 .margintop20{
 	margin-top:30px;
 }
@@ -50,6 +59,7 @@ html, body{
 	margin-top: 80px;
 }
 
+/* margin bottom */
 .marginbottom30{
 	margin-bottom:30px;
 }
@@ -67,6 +77,7 @@ html, body{
 	margin-right:auto;
 }
 
+/* pading top */
 .paddingtop30{
 	padding-top:30px;
 }
@@ -83,6 +94,7 @@ html, body{
 	padding-top:60px;
 }
 
+/* padding bottom */
 .paddingbottom30{
 	padding-bottom:30px;
 }
@@ -102,13 +114,8 @@ html, body{
 }
 
 
-.no-padding-xs{
-	@media (max-width:767px){
-		padding-left:0px;
-		padding-right:0px;
-	}
-}
 
+/* margin and padding when it is xs */
 @media (max-width:767px){
 	.margintop30, .margintop50, .margintop60, .margintop80{
 		margin-top:0px;
@@ -127,6 +134,14 @@ html, body{
 	}
 	.margintop10-xs{
 		margin-top:10px;
+	}
+
+	.marginbottom30{
+		margin-bottom:0px;
+	}
+
+	.marginbottom20-xs{
+		margin-bottom:20px;
 	}
 
 	.paddingtop30, .paddingtop40, .paddingtop50, .paddingtop60{
