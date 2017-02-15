@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
 
+    'accounts.providers.kakao',
+
     # third party apps
     'hitcount',
     'bootstrap3',

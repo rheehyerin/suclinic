@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block css %}
+<style>
+.errorlist li ul{
+    color : red;
+}
+.error_msg{
+    color:red;
+}
+.signup_form{
+    width : 380px;
+    margin : 0 auto;
+}
+.signup_form div{
+    text-align: center;
+    padding:1px;
+    margin: 5%;
+}
+.form_label{
+    border-radius: 5px;
+    padding:1.5%;
+    color : white;
+    background-color: lightgray;
+}
+input[type=submit] {
+    color:white;
+    padding:5px 15px;
+    background:lightgray;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+</style>
+{% endblock %}
+{% block content %}
+    <div id = "content" class="signup_form">
+        <center><h1> 회원가입</h1>
+        <form method="post" action=".">
+        {% csrf_token %}
+            {% if form.errors %}
+                {% for field in form %}
+                    {% if field.errors %}
+                        {{ field.label }}을(를) 다시 입력해주십시오.<br/>
+                        {% for error in field.errors %}
+                            <span class="error_msg">{{ error }}</span><br/>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <br/>
+            <p>아래의 양식을 기입해주세요.</p>
+            </center>
+            <fieldset class="aligned">
+                <div class="form-row">
+                    <!-- {{form.username.label_tag}} {{form.username}} -->
+                    <span class="form_label">회원 ID</span> {{form.username}}
+                </div>
+                <div class="form-row"><!--
+                    {{form.first_name.label_tag}} {{form.first_name}} -->
+                    <span class="form_label">이름</span> {{form.first_name}}
+                </div>
+								<div class="form-row">
+                    <!-- {{form.password2.label_tag}} {{form.password2}} -->
+                    <span class="form_label">이메일 주소</span> {{form.email}}
+                </div>
+                <div class="form-row">
+                    <!-- {{form.password1.label_tag}} {{form.password1}} -->
+                    <span class="form_label">비밀번호</span> {{form.password1}}
+                </div>
+                <div class="form-row">
+                    <!-- {{form.password2.label_tag}} {{form.password2}} -->
+                    <span class="form_label">비밀번호 확인</span> {{form.password2}}
+                </div>
+
+            </fieldset>
+            <br/>
+            <br/>
+            <div class="submit-row">
+                <input type="submit" value="Register"/>
+            </div>
+        </form>
+    </div>
+{% endblock %}
