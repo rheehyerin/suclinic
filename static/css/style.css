@@ -294,6 +294,10 @@ html, body {
 
   .paddingbottom10-xs {
     padding-bottom: 10px; } }
+.col-centered {
+  float: none;
+  margin: 0 auto; }
+
 .img-responsive.minmax {
   min-width: 100%;
   position: relative;
@@ -362,6 +366,32 @@ footer ul {
   min-height: 1px;
   width: 3.5%;
   float: left; }
+
+footer .footer_nav > li > a {
+  font-size: 6pt;
+  position: relative;
+  display: block;
+  color: #fefefe;
+  padding: 10px 0px;
+  text-decoration: none; }
+footer .footer_nav {
+  list-style: none;
+  display: inline-block;
+  float: none;
+  margin: 0px; }
+  footer .footer_nav li {
+    float: left;
+    position: relative;
+    display: block; }
+footer .vertical-bar {
+  margin-top: 1px;
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 1px;
+  background-color: #fefefe;
+  height: 8px; }
 
 .img-responsive {
   margin: 0 auto; }
