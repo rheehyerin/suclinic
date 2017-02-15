@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "../account_base.html" %}
 {% block css %}
 <style>
 .errorlist li ul{
@@ -17,11 +17,14 @@
     margin: 5%;
 }
 .form_label{
+		width:100px;
+		float:left;
     border-radius: 5px;
     padding:1.5%;
     color : white;
     background-color: lightgray;
 }
+
 input[type=submit] {
     color:white;
     padding:5px 15px;
@@ -31,13 +34,35 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
+@media screen and (max-width: 767px){
+	.signup_form{
+    width : 180px;
+    margin : 0 auto;
+}
+	h4{
+		font-size:13pt;
+	}
+	.form_label{
+		margin-bottom:5px;
+	}
+}
 </style>
 {% endblock %}
-{% block content %}
+
+{% block semi_title %}
+회원가입
+{% endblock %}
+
+{% block sub_title %}
+HOME > 회원가입
+{% endblock %}
+
+{% block form_content %}
     <div id = "content" class="signup_form">
-        <center><h1> 회원가입</h1>
+
         <form method="post" action=".">
         {% csrf_token %}
+            <fieldset class="margintop20" style="border-top:3px solid black;">
             {% if form.errors %}
                 {% for field in form %}
                     {% if field.errors %}
@@ -49,10 +74,7 @@ input[type=submit] {
                 {% endfor %}
             {% endif %}
             <br/>
-            <p>아래의 양식을 기입해주세요.</p>
-            </center>
-            <fieldset class="aligned">
-                <div class="form-row">
+                <div class="form-row" >
                     <!-- {{form.username.label_tag}} {{form.username}} -->
                     <span class="form_label">회원 ID</span> {{form.username}}
                 </div>

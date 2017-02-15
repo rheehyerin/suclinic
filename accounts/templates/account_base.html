@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load socialaccount %}
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="col-md-42 content-title margintop50">
+		<div class="semi_title">
+			{% block semi_title %} {% endblock %}
+		</div>
+		<div class="sub_title">
+			{% block sub_title %} {% endblock %}
+		</div>
+	</div>
+
+	<div class="col-md-38 col-md-offset-2 margintop30">
+		<div class="row">
+			{% block social_login %} {% endblock %}
+		</div>
+		<div class="row">
+			{% block form_content %} {% endblock %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}
