@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'ckeditor',
     'ckeditor_uploader',
+    'sorl.thumbnail',
 ]
 
 SITE_ID = 1

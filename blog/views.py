@@ -76,23 +76,23 @@ class CustomHideView(LoginRequiredMixin, ListView):
 
 class NoticeList(CustomListView):
     model = Notice
-    template_name = 'blog/list.html'
+    template_name = 'blog/notice_list.html'
 
 
 class NoticeDetail(CustomDetailView):
     model = Notice
-    template_name = 'blog/detail.html'
+    template_name = 'blog/notice_detail.html'
 
 
 class NoticeCreate(CustomCreateView):
     model = Notice
-    template_name = 'blog/create.html'
+    template_name = 'blog/notice_create.html'
     form_class = NoticeForm
 
 
 class NoticeHide(CustomHideView):
     model = Notice
-    template_name = 'blog/list.html'
+    template_name = 'blog/notice_list.html'
 
 
 class NoticeDelete(LoginRequiredMixin, DeleteView):
@@ -102,23 +102,23 @@ class NoticeDelete(LoginRequiredMixin, DeleteView):
 
 class ReviewList(CustomListView):
     model = Review
-    template_name = 'blog/list.html'
+    template_name = 'blog/review_list.html'
 
 
 class ReviewDetail(CustomDetailView):
     model = Review
-    template_name = 'blog/detail.html'
+    template_name = 'blog/review_detail.html'
 
 
 class ReviewCreate(CustomCreateView):
     model = Review
-    template_name = 'blog/create.html'
+    template_name = 'blog/review_create.html'
     form_class = ReviewForm
 
 
 class ReviewHide(CustomHideView):
     model = Review
-    template_name = 'blog/list.html'
+    template_name = 'blog/review_list.html'
 
 
 class ReviewDelete(LoginRequiredMixin, DeleteView):
@@ -128,23 +128,23 @@ class ReviewDelete(LoginRequiredMixin, DeleteView):
 
 class BeforeAfterList(CustomListView):
     model = BeforeAfter
-    template_name = 'blog/image_list.html'
+    template_name = 'blog/beforeafter_list.html'
 
 
 class BeforeAfterDetail(CustomDetailView):
     model = BeforeAfter
-    template_name = 'blog/image_detail.html'
+    template_name = 'blog/beforeafter_detail.html'
 
 
 class BeforeAfterCreate(CustomCreateView):
     model = BeforeAfter
-    template_name = 'blog/create.html'
+    template_name = 'blog/beforeafter_create.html'
     form_class = BeforeAfterForm
 
 
 class BeforeAfterHide(CustomHideView):
     model = BeforeAfter
-    template_name = 'blog/image_list.html'
+    template_name = 'blog/beforeafter_list.html'
 
 
 class BeforeAfterDelete(LoginRequiredMixin, DeleteView):
@@ -154,23 +154,23 @@ class BeforeAfterDelete(LoginRequiredMixin, DeleteView):
 
 class CounselList(CustomListView):
     model = Counsel
-    template_name = 'blog/list.html'
+    template_name = 'blog/counsel_list.html'
 
 
 class CounselDetail(CustomDetailView):
     model = Counsel
-    template_name = 'blog/detail.html'
+    template_name = 'blog/counsel_detail.html'
 
 
 class CounselCreate(CustomCreateView):
     model = Counsel
-    template_name = 'blog/create.html'
+    template_name = 'blog/counsel_create.html'
     form_class = CounselForm
 
 
 class CounselHide(CustomHideView):
     model = Counsel
-    template_name = 'blog/list.html'
+    template_name = 'blog/counsel_list.html'
 
 
 class CounselDelete(LoginRequiredMixin, DeleteView):

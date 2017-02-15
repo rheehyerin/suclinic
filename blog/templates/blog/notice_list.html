@@ -1,0 +1,26 @@
+{% extends "blog/list.html" %}
+{% load staticfiles %}
+
+{% block semi_title %}
+	공지 / 이벤트
+{% endblock semi_title %}
+
+{% block sub_title %}
+	커뮤니티 > 공지 / 이벤트
+{% endblock sub_title %}
+
+{% block main %}
+	<img src="{% static 'img/community/notice.jpg' %}" class="img-responsive content-border1 paddingtop60">
+{% endblock main %}
+
+{% block mainsm %}
+	<img src="{% static 'img/community/noticesm.jpg' %}" class="img-responsive content-border1 paddingtop30-xs">
+{% endblock mainsm %}
+
+{% block atag %}
+	<a href="{% url 'blog:notice_detail' pk=article.pk %}">
+{% endblock atag %}
+
+{% block create_article %}
+<a href="{% url 'blog:notice_create' %}">새 글쓰기</a>
+{% endblock %}

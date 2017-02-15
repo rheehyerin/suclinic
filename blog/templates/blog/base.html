@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid no-padding-xs">
+	<div class="col-lg-42 col-lg-offset-0 col-sm-38 col-sm-offset-2 col-xs-42 content-title margintop50 margintop10-xs">
+		<div class="semi_title">
+		{% block semi_title %}{% endblock %}
+		</div>
+		<div class="sub_title marginbottom20-xs">
+		{% block sub_title %}{% endblock %}
+		</div>
+	</div>
+
+	<div class="col-sm-38 col-sm-offset-2 col-xs-42 margintop30">
+		<div class="row hidden-xs">
+		{% block main %} {% endblock %}
+		</div>
+
+		<div class="row visible-xs">
+		{% block mainsm %} {% endblock %}
+		</div>
+
+		{% block detail %} {% endblock %}
+
+		<div class="row marginbottom60">
+		{% block list %} {% endblock %}
+		</div>
+
+	</div>
+</div>
+{% endblock content %}

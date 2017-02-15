@@ -9,10 +9,10 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from sorl.thumbnail import ImageField
 
 
-class BoardMixin(models.Model):
+class BoardMixin(HitCountMixin, models.Model):
     author = models.ForeignKey(User)
-    title = RichTextUploadingField(max_length=50)
-    content = models.TextField()
+    title = models.CharField(max_length=50)
+    content = RichTextUploadingField()
     show = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now=True)
     updated_at = models.DateTimeField(auto_now_add=True)
@@ -29,8 +29,8 @@ class Notice(BoardMixin):
         verbose_name = '공지/이벤트'
         verbose_name_plural = '공지/이벤트'
 
-    # def get_absolute_url(self):
-    #     return reverse('blog:notice_detail', kwargs={'pk': self.pk})
+    def get_absolute_url(self):
+        return reverse('blog:notice_detail', kwargs={'pk': self.pk})
 
 
 class Review(BoardMixin):
@@ -38,8 +38,8 @@ class Review(BoardMixin):
         verbose_name = '고객후기'
         verbose_name_plural = '고객후기'
 
-    # def get_absolute_url(self):
-    #     return reverse('blog:review_detail', kwargs={'pk': self.pk})
+    def get_absolute_url(self):
+        return reverse('blog:review_detail', kwargs={'pk': self.pk})
 
 
 class Counsel(BoardMixin):
@@ -47,16 +47,16 @@ class Counsel(BoardMixin):
         verbose_name = '온라인 상담'
         verbose_name_plural = '온라인 상담'
 
-    # def get_absolute_url(self):
-    #     return reverse('blog:counsel_detail', kwargs={'pk': self.pk})
+    def get_absolute_url(self):
+        return reverse('blog:counsel_detail', kwargs={'pk': self.pk})
 
 
 class BeforeAfter(BoardMixin):
-    image = models.ImageField(upload_to=RenameFile('images/'))
+    image = ImageField(upload_to=RenameFile('images/'))
 
     class Meta:
         verbose_name = '전후사진'
         verbose_name_plural = '전후사진'
 
-    # def get_absolute_url(self):
-    #     return reverse('blog:bf_detail', kwargs={'pk': self.pk})
+    def get_absolute_url(self):
+        return reverse('blog:beforeafter_detail', kwargs={'pk': self.pk})
