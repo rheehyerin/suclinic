@@ -1,1 +1,44 @@
-{% extends "base.html" %}
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% load hitcount_tags %}
+
+<!-- list -->
+{% block list %}
+<div class="container blog" style="margin-top: 50px;">
+	<div class="col-md-34 col-sm-42 col-md-offset-4">
+		<table class="table">
+			<tr>
+				<th>No.</th>
+				<th class="title col-sm-21">Title</th>
+				<th class="hidden-xs">Date</th>
+				<th>Name</th>
+				<th>Hit count</th>
+			</tr>
+
+			{% for article in page_obj %}
+				<tr>
+					{# <!-- <td>{{ forloop.revcounter|multiply_add:page_obj.number|one_more:page_obj.paginator.page_range }}</td> --> #}
+					<td>{{ article.pk }}</td>
+					<td class="title col-sm-21">
+					{% block atag %} {% endblock atag %}
+						{{ article.title }}
+					</a>
+					</td>
+					<td class="hidden-xs">{{ article.updated_at }}</td>
+					<td>{{ article.author }}</td>
+					<td>{% get_hit_count for article %}</td>
+					{% block admin %}
+					{% endblock %}
+				</tr>
+			{% endfor %}
+		</table>
+
+	{% include "blog/paginator.html" %}
+
+	{% block create_article %}
+	{% endblock %}
+
+	</div>
+</div>
+
+{% endblock %}

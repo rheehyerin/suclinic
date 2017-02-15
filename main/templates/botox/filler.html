@@ -25,3 +25,11 @@ HOME > 보톡스/필러 > 필러
 {% block detailsm %}
 	<img src="{% static 'img/botox/filler2s.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#botox1', '#botox')
+	});
+</script>
+{% endblock javascript %}
