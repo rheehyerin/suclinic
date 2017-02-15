@@ -25,3 +25,11 @@ HOME > 필링/재생 > 아쿠아필
 {% block detailsm %}
 	<img src="{% static 'img/peeling/aqua2s.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#peeling2', '#peeling')
+	});
+</script>
+{% endblock javascript %}

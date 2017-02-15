@@ -25,3 +25,11 @@ HOME > 흉터/모공/튼살 > 레가토
 {% block detailsm %}
 	<img src="{% static 'img/scar/legato2s.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#scar1', '#scar')
+	});
+</script>
+{% endblock javascript %}

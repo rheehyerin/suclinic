@@ -25,3 +25,11 @@ HOME > 쁘띠/동안 > 다크서클
 {% block detailsm %}
 	<img src="{% static 'img/petit/darkcircle2s.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#young1', '#young')
+	});
+</script>
+{% endblock javascript %}

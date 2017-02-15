@@ -25,3 +25,11 @@ HOME > 윤곽/리프팅 > 실 리프팅
 {% block detailsm %}
 	<img src="{% static 'img/contour/thread2s.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#lifting2', '#lifting')
+	});
+</script>
+{% endblock javascript %}

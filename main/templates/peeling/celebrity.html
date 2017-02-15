@@ -25,3 +25,11 @@ HOME > 필링/재생 > 연예인
 {% block detailsm %}
 	<img src="{% static 'img/peeling/celebrity2s.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#peeling3', '#peeling')
+	});
+</script>
+{% endblock javascript %}

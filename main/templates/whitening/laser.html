@@ -24,3 +24,11 @@
 {% block detailsm %}
 	<img src="{% static 'img/whitening/laser2s.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#whitening1', '#whitening')
+	});
+</script>
+{% endblock javascript %}
