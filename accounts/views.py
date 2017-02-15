@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
 from .forms import SignupForm
 from django.contrib.auth.views import login as django_login
