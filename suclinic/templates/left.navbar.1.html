@@ -6,7 +6,7 @@
 			<img src="{% static 'img/icon-bar.png' %}" class="img-responsive">
 		</button>
 		<div style="display: inline-block;">
-			<a href="./" class="brand no-padding">
+			<a href="{% url 'main:main' %}" class="brand no-padding">
 				<img src="{% static 'img/logo.png' %}" class="img-responsive">
 			</a>
 		</div>
@@ -19,61 +19,62 @@
 		<ul id="menu-content" class="menu-content collapse out">
 
 			<li data-toggle="collapse" class="collapsed hidden-sm hidden-xs" style="display: none;">
-				<a href="#">병원 소개</a>
+				<a href="javascript:void(0)">병원 소개</a>
 			</li>
 
 
 			<li data-toggle="collapse" data-target="#intro" class="collapsed">
-				<a href="#">병원 소개<span class="caret"></span></a>
+				<a href="#">병원소개<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="intro">
-				<li>수클리닉소개</li>
-				<li>병원둘러보기</li>
-				<li><a href="{% url 'main:map' %}">오시는길</a></li>
+				<li>수클리닉 소개</li>
+				<li>의료진 소개</li>
+				<li>병원 둘러보기</li>
+				<li><a href="{% url 'main:map' %}">오시는 길</a></li>
 			</ul>
 
 			<li data-toggle="collapse" data-target="#whitening" class="collapsed">
-				<a href="#">기미/잡티/화이트닝<span class="caret"></span></a>
+				<a href="#">화이트닝 / 기미 / 잡티<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="whitening">
-				<li><a href="{% url 'main:laser' %}">레이저토닝VRM4</a></li>
-				<li><a href="{% url 'main:whitening' %}">미백레가또</a></li>
+				<li><a href="{% url 'main:laser' %}">레이저 토닝</a></li>
+				<li><a href="{% url 'main:whitening' %}">미백 레가또</a></li>
 				<li><a href="{% url 'main:targeting' %}">타겟팅</a></li>
 				<li><a href="{% url 'main:jade' %}">백옥주사</a></li>
 			</ul>
 
 			<li data-toggle="collapse" data-target="#peeling" class="collapsed">
-				<a href="#">필링/재생<span class="caret"></span></a>
+				<a href="#">필링 / 재생<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="peeling">
 				<li><a href="{% url 'main:spectra' %}">스펙트라필</a></li>
 				<li><a href="{% url 'main:aqua' %}">아쿠아필</a></li>
-				<li><a href="{% url 'main:celebrity' %}">연예인필(더말코드)</a></li>
-				<li><a href="{% url 'main:latte' %}">라떼필(스트롱,마일드)</a></li>
+				<li><a href="{% url 'main:celebrity' %}">연예인필</a></li>
+				<li><a href="{% url 'main:latte' %}">라떼필</a></li>
 			</ul>
 
 			<li data-toggle="collapse" data-target="#scar" class="collapsed">
-				<a href="#">흉터/모공/튼살치료<span class="caret"></span></a>
+				<a href="#">흉터 / 모공 / 튼살치료<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="scar">
 				<li><a href="{% url 'main:legato' %}">레가토</a></li>
-				<li><a href="{% url 'main:prp' %}">PRP(와이셀 바이오)</a></li>
+				<li><a href="{% url 'main:prp' %}">PRP(자가혈)</a></li>
 				<li><a href="{% url 'main:tera' %}">테라필</a></li>
 			</ul>
 
 			<li data-toggle="collapse" data-target="#botox" class="collapsed">
-				<a href="#">필러/보톡스<span class="caret"></span></a>
+				<a href="#">필러 / 보톡스<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="botox">
-				<li><a href="{% url 'main:filler' %}">필러(이브아르,채움)</a></li>
-				<li><a href="{% url 'main:botox' %}">보톡스(메디톡신,보튤렉스)</a></li>
+				<li><a href="{% url 'main:filler' %}">필러</a></li>
+				<li><a href="{% url 'main:botox' %}">보톡스</a></li>
 			</ul>
 
 			<li data-toggle="collapse" data-target="#young" class="collapsed">
-				<a href="#">쁘띠/동안시술<span class="caret"></span></a>
+				<a href="#">쁘띠 / 동안시술<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="young">
-				<li><a href="{% url 'main:darkcircle' %}">다크서클주사</a></li>
+				<li><a href="{% url 'main:darkcircle' %}">다크서클 주사</a></li>
 				<li><a href="{% url 'main:kotppol' %}">콧볼축소</a></li>
 				<li><a href="{% url 'main:highnose' %}">하이코</a></li>
 				<li><a href="{% url 'main:dermotoxin' %}">더마톡신</a></li>
@@ -81,12 +82,12 @@
 			</ul>
 
 			<li data-toggle="collapse" data-target="#lifting" class="collapsed">
-				<a href="#">윤곽/리프팅<span class="caret"></span></a>
+				<a href="#">윤곽 / 리프팅<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="lifting">
-				<li><a href="{% url 'main:doublero' %}">더블로S</a></li>
-				<li><a href="{% url 'main:thread' %}">실리프팅(엔파인더스)</a></li>
-				<li><a href="{% url 'main:bigeyes' %}">왕눈이리프팅</a></li>
+				<li><a href="{% url 'main:doublero' %}">더블로-S</a></li>
+				<li><a href="{% url 'main:thread' %}">실 리프팅</a></li>
+				<li><a href="{% url 'main:bigeyes' %}">왕눈이 리프팅</a></li>
 				<li><a href="{% url 'main:contour' %}">윤곽주사</a></li>
 			</ul>
 
@@ -94,31 +95,31 @@
 				<a href="#">여드름<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="pimple">
-				<li><a href="{% url 'main:pimple' %}">5단계 치료솔루션</a></li>
+				<li><a href="{% url 'main:pimple' %}">여드름</a></li>
 			</ul>
 
 			<li data-toggle="collapse" data-target="#fat" class="collapsed">
-				<a href="#">비만/체형관리<span class="caret"></span></a>
+				<a href="#">비만 / 체형관리<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="fat">
-				<li><a href="{% url 'main:coolshaping' %}">냉동지방파괴쿨쉐이핑</a></li>
-				<li><a href="{% url 'main:lipolysis' %}">지방분해주사</a></li>
-				<li><a href="{% url 'main:mesotherapie' %}">파워메조테라피</a></li>
+				<li><a href="{% url 'main:coolshaping' %}">쿨쉐이핑</a></li>
+				<li><a href="{% url 'main:lipolysis' %}">지방분해 주사</a></li>
+				<li><a href="{% url 'main:mesotherapie' %}">파워 메조테라피</a></li>
 				<li><a href="{% url 'main:carboxy' %}">카복시</a></li>
 				<li><a href="{% url 'main:slim' %}">슬림주사</a></li>
 				<li><a href="{% url 'main:hpl' %}">HPL</a></li>
 				<li><a href="{% url 'main:highfrequency' %}">고주파</a></li>
-				<li><a href="{% url 'main:cinderella' %}">신데렐라주사</a></li>
+				<li><a href="{% url 'main:cinderella' %}">신데렐라 주사</a></li>
 			</ul>
 
 			<li data-toggle="collapse" data-target="#community" class="collapsed">
 				<a href="#">커뮤니티<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="community">
-				<li>공지/이벤트</li>
-				<li>고객후기</li>
-				<li>온라인 상담</li>
-				<li>전후 사진</li>
+				<li><a href="{% url 'blog:counsel_list' %}">온라인 상담</a></li>
+				<li><a href="{% url 'blog:beforeafter_list' %}">전후 사진</a></li>
+				<li><a href="{% url 'blog:notice_list' %}">공지/이벤트</a></li>
+				<li><a href="{% url 'blog:review_list' %}">고객후기</a></li>
 			</ul>
 
 		</ul>
