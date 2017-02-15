@@ -4,3 +4,4 @@ django-hitcount
 django-ckeditor
 django-uploader
 django-bootstrap3
+django-allauth
