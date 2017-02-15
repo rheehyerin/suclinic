@@ -5,3 +5,4 @@ django-ckeditor
 django-uploader
 django-bootstrap3
 django-allauth
+git+https://github.com/mariocesar/sorl-thumbnail.git

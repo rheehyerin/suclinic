@@ -13,6 +13,7 @@ from django.views.generic.edit import CreateView, DeleteView
 from hitcount.views import HitCountDetailView
 
 from .models import Notice, Review, BeforeAfter, Counsel
+from .forms import NoticeForm, ReviewForm, BeforeAfterForm, CounselForm
 
 PAGINATION = 9
 
@@ -75,9 +76,103 @@ class CustomHideView(LoginRequiredMixin, ListView):
 
 class NoticeList(CustomListView):
     model = Notice
-    template_name = 'blog/notice_list.html'
+    template_name = 'blog/list.html'
+
+
+class NoticeDetail(CustomDetailView):
+    model = Notice
+    template_name = 'blog/detail.html'
+
+
+class NoticeCreate(CustomCreateView):
+    model = Notice
+    template_name = 'blog/create.html'
+    form_class = NoticeForm
+
+
+class NoticeHide(CustomHideView):
+    model = Notice
+    template_name = 'blog/list.html'
 
 
 class NoticeDelete(LoginRequiredMixin, DeleteView):
     model = Notice
-    success_url = reverse_lazy('blog:branch_list')
+    success_url = reverse_lazy('blog:notice_list')
+
+
+class ReviewList(CustomListView):
+    model = Review
+    template_name = 'blog/list.html'
+
+
+class ReviewDetail(CustomDetailView):
+    model = Review
+    template_name = 'blog/detail.html'
+
+
+class ReviewCreate(CustomCreateView):
+    model = Review
+    template_name = 'blog/create.html'
+    form_class = ReviewForm
+
+
+class ReviewHide(CustomHideView):
+    model = Review
+    template_name = 'blog/list.html'
+
+
+class ReviewDelete(LoginRequiredMixin, DeleteView):
+    model = Review
+    success_url = reverse_lazy('blog:review_list')
+
+
+class BeforeAfterList(CustomListView):
+    model = BeforeAfter
+    template_name = 'blog/image_list.html'
+
+
+class BeforeAfterDetail(CustomDetailView):
+    model = BeforeAfter
+    template_name = 'blog/image_detail.html'
+
+
+class BeforeAfterCreate(CustomCreateView):
+    model = BeforeAfter
+    template_name = 'blog/create.html'
+    form_class = BeforeAfterForm
+
+
+class BeforeAfterHide(CustomHideView):
+    model = BeforeAfter
+    template_name = 'blog/image_list.html'
+
+
+class BeforeAfterDelete(LoginRequiredMixin, DeleteView):
+    model = Notice
+    success_url = reverse_lazy('blog:beforeafter_list')
+
+
+class CounselList(CustomListView):
+    model = Counsel
+    template_name = 'blog/list.html'
+
+
+class CounselDetail(CustomDetailView):
+    model = Counsel
+    template_name = 'blog/detail.html'
+
+
+class CounselCreate(CustomCreateView):
+    model = Counsel
+    template_name = 'blog/create.html'
+    form_class = CounselForm
+
+
+class CounselHide(CustomHideView):
+    model = Counsel
+    template_name = 'blog/list.html'
+
+
+class CounselDelete(LoginRequiredMixin, DeleteView):
+    model = Notice
+    success_url = reverse_lazy('blog:counsel_list')
