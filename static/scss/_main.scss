@@ -10,3 +10,10 @@
 		width:30.63%;
 	}
 }
+
+#map {
+	height: 300px;
+	@include responsive(md) {
+		height: 500px;
+	}
+}

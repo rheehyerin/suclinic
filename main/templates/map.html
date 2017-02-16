@@ -18,7 +18,7 @@ HOME > 병원 소개 > 오시는 길
 {% endblock %}
 
 {% block common %}
-	<div id="map" style="width: 100%; height: 500px;"></div>
+	<div id="map" style="width: 100%; max-width: 1300px; margin: 0 auto;"></div>
 {% endblock %}
 
 {% block detail %}
@@ -26,7 +26,7 @@ HOME > 병원 소개 > 오시는 길
 {% endblock %}
 
 {% block detailsm %}
-	<img src="{% static 'img/map/sm.jpeg' %}" class="img-responsive content-border2 paddingtop20-xs">
+	<img src="{% static 'img/map/sm.jpeg' %}" class="img-responsive content-border2 paddingtop20-xs" style="margin: 10px;">
 {% endblock %}
 
 
@@ -59,5 +59,6 @@ HOME > 병원 소개 > 오시는 길
 
 	  // 스크롤로 지도 확대/축소를 불가능하게 막습니다.
 	  map.setZoomable(false);
+	  map.setDraggable(false);
 	</script>
 	{% endblock javascript %}

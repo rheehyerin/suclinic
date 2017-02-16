@@ -14,7 +14,7 @@
   /* 화면 크기 1872 이상 일때, 고해상도 노트북 이상 일 때 설정*/ }
   @media screen and (min-width: 992px) {
     .nav-side-menu {
-      width: 10.5%; } }
+      width: 14%; } }
   @media screen and (max-width: 991px) {
     .nav-side-menu ul > li {
       padding-left: 10px; } }
@@ -118,8 +118,7 @@
 
 @media (max-width: 991px) {
   .nav-side-menu {
-    position: relative;
-    margin-bottom: 10px; }
+    position: relative; }
     .nav-side-menu .brand {
       margin-bottom: 0px; }
 
@@ -156,8 +155,14 @@ body {
     margin-right: 15px;
     margin-top: 10px;
     padding-left: 0; } }
-.menu-list ul a {
-  font-size: 10pt; }
+#menu-content > li > a {
+  font-size: 11pt; }
+
+@media screen and (max-width: 991px) {
+  .left-navbar {
+    -webkit-box-shadow: 0px 7px 25px -10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 7px 25px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 7px 25px -10px rgba(0, 0, 0, 0.1); } }
 
 html, body {
   width: 100%; }
@@ -358,8 +363,8 @@ footer ul {
   /* 화면 크기 1872 이상 일때, 고해상도 노트북 이상 일 때 설정*/ }
   @media screen and (min-width: 992px) {
     .base-center {
-      margin-left: 10.5%;
-      width: 86%; } }
+      margin-left: 14%;
+      width: 82.5%; } }
 
 .right-navbar {
   position: relative;
@@ -402,6 +407,13 @@ footer .vertical-bar {
 
   .md30 {
     width: 30.63%; } }
+#map {
+  height: 300px;
+  /* 화면 크기 1872 이상 일때, 고해상도 노트북 이상 일 때 설정*/ }
+  @media screen and (min-width: 992px) {
+    #map {
+      height: 500px; } }
+
 .navbar-default {
   background-color: white; }
 

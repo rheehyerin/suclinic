@@ -10,7 +10,7 @@
   height: 100%;
   color: #1b1c1d;
   @include responsive(md) {
-  	width: 10.5%;
+  	width: 14%;
   }
 
 	@media screen and (max-width:991px){
@@ -134,7 +134,7 @@
 @media (max-width: 991px) {
   .nav-side-menu {
     position: relative;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     .brand {
     	margin-bottom: 0px;
     }
@@ -182,11 +182,18 @@ body {
 		}
 	}
 }
-.menu-list {
-	ul {
-		a {
-			font-size: 10pt;
+#menu-content {
+	> li {
+		> a {
+			font-size: 11pt;
 		}
 	}
 }
 
+.left-navbar {
+	@media screen and (max-width: 991px) {
+		-webkit-box-shadow: 0px 7px 25px -10px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 7px 25px -10px rgba(0,0,0,0.1);
+		box-shadow: 0px 7px 25px -10px rgba(0,0,0,0.1);
+	}
+}
