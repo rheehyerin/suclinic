@@ -21,6 +21,8 @@
 	<a href="{% url 'blog:notice_detail' pk=article.pk %}">
 {% endblock atag %}
 
-{% block create_article %}
-<a href="{% url 'blog:notice_create' %}">새 글쓰기</a>
-{% endblock %}
+{% if user.is_staff %}
+	{% block create_article %}
+	<a href="{% url 'blog:notice_create' %}">새 글쓰기</a>
+	{% endblock %}
+{% endif %}

@@ -1,1 +1,10 @@
 {% extends "blog/detail.html" %}
+
+{% block detail %}
+
+{{ object.title }}
+{{ object.author }}
+{{ object.created_at }}
+{{ object.content|safe }}
+
+{% endblock detail %}

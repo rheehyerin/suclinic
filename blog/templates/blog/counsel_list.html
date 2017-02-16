@@ -1,1 +1,28 @@
 {% extends "blog/list.html" %}
+{% load staticfiles %}
+
+{% block semi_title %}
+온라인 상담
+{% endblock semi_title %}
+
+{% block sub_title %}
+HOME > 커뮤니티 > 온라인 상담
+{% endblock sub_title %}
+
+{% block main %}
+	<img src="{% static 'img/community/counsel.jpg' %}" class="img-responsive content-border1 paddingtop60">
+{% endblock main %}
+
+{% block mainsm %}
+	<img src="{% static 'img/community/counselsm.jpg' %}" class="img-responsive content-border1 paddingtop30-xs">
+{% endblock mainsm %}
+
+{% block atag %}
+	<a href="{% url 'blog:counsel_detail' pk=article.pk %}">
+{% endblock atag %}
+
+{% if user.is_authenticated %}
+	{% block create_article %}
+	<a href="{% url 'blog:counsel_create' %}">새 글쓰기</a>
+	{% endblock %}
+{% endif %}
