@@ -7,6 +7,7 @@ from blog.model_rename import RenameFile
 from hitcount.models import HitCountMixin
 from ckeditor_uploader.fields import RichTextUploadingField
 from sorl.thumbnail import ImageField
+from django_unique_slugify import unique_slugify as uslug
 
 
 class BoardMixin(HitCountMixin, models.Model):
