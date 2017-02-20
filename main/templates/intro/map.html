@@ -6,15 +6,15 @@
 {% endblock %}
 
 {% block sub_title %}
-HOME > 병원 소개 > 오시는 길
+HOME > 병원소개 > 오시는 길
 {% endblock %}
 
 {% block main %}
-	<img src="{% static 'img/map/title.jpg' %}" class="img-responsive content-border1 paddingtop60">
+	<img src="{% static 'img/intro/map1.jpg' %}" class="img-responsive content-border1 paddingtop60">
 {% endblock %}
 
 {% block mainsm %}
-	<img src="{% static 'img/map/subtitle.jpg' %}" class="img-responsive content-border1 paddingtop30-xs">
+	<img src="{% static 'img/intro/map1s.jpg' %}" class="img-responsive content-border1 paddingtop30-xs">
 {% endblock %}
 
 {% block common %}
@@ -22,11 +22,11 @@ HOME > 병원 소개 > 오시는 길
 {% endblock %}
 
 {% block detail %}
-	<img src="{% static 'img/map/big.jpeg' %}" class="img-responsive content-border2">
+	<img src="{% static 'img/intro/map2.jpeg' %}" class="img-responsive content-border2">
 {% endblock %}
 
 {% block detailsm %}
-	<img src="{% static 'img/map/sm.jpeg' %}" class="img-responsive content-border2 paddingtop20-xs" style="margin: 10px;">
+	<img src="{% static 'img/intro/map2s.jpeg' %}" class="img-responsive content-border2 paddingtop20-xs">
 {% endblock %}
 
 
@@ -60,5 +60,6 @@ HOME > 병원 소개 > 오시는 길
 	  // 스크롤로 지도 확대/축소를 불가능하게 막습니다.
 	  map.setZoomable(false);
 	  map.setDraggable(false);
+	  activelist('#intro4', '#intro')
 	</script>
 	{% endblock javascript %}

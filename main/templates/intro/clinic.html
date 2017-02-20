@@ -1,0 +1,35 @@
+{% extends "../detailpage.html" %}
+{% load staticfiles %}
+
+{% block semi_title %}
+병원 둘러보기
+{% endblock %}
+
+{% block sub_title %}
+HOME > 병원소개 > 병원 둘러보기
+{% endblock %}
+
+{% block main %}
+	<img src="{% static 'img/intro/clinic1.jpg' %}" class="img-responsive content-border1 paddingtop60">
+{% endblock %}
+
+{% block mainsm %}
+	<img src="{% static 'img/intro/clinic1s.jpg' %}" class="img-responsive content-border1 paddingtop30-xs">
+{% endblock %}
+
+
+{% block detail %}
+	<img src="{% static 'img/intro/clinic2.jpg' %}" class="img-responsive content-border2 paddingtop60">
+{% endblock %}
+
+{% block detailsm %}
+	<img src="{% static 'img/intro/clinic2.jpg' %}" class="img-responsive content-border2 paddingtop20-xs">
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#intro3', '#intro')
+	});
+</script>
+{% endblock javascript %}

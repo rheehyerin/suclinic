@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'sorl.thumbnail',
+    'django_unique_slugify',
 ]
 
 SITE_ID = 1

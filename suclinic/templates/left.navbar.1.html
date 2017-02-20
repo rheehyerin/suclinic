@@ -27,9 +27,9 @@
 				<a href="#">병원소개<span class="caret"></span></a>
 			</li>
 			<ul class="sub-menu collapse" id="intro">
-				<li id="intro1">수클리닉 소개</li>
-				<li id="intro2">의료진 소개</li>
-				<li id="intro3">병원 둘러보기</li>
+				<li id="intro1"><a href="{% url 'main:intro' %}">수클리닉 소개</a></li>
+				<li id="intro2"><a href="{% url 'main:doctor' %}">의료진 소개</a></li>
+				<li id="intro3"><a href="{% url 'main:clinic' %}">병원 둘러보기</a></li>
 				<li id="intro4"><a href="{% url 'main:map' %}">오시는 길</a></li>
 			</ul>
 
