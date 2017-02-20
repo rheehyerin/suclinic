@@ -1,2 +1,11 @@
 {% extends "../detailpage.html" %}
 {% load staticfiles %}
+
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		activelist('#intro2', '#intro')
+	});
+</script>
+{% endblock javascript %}
