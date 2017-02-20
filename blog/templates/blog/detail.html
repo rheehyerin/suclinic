@@ -1,7 +1,29 @@
 {% extends "blog/list.html" %}
 
 {% block detail %}
-	<div class="row marginbottom60">
-		{% block detail1 %} {% endblock %}
+	<div class = "container col-md-42">
+	<div class="row">
+		<div class="col-md-36 col-sm-36 col-md-offset-3">
+			<div class="bolg__item">
+				<div class="blog__header">
+					<h1 class="blog__title">
+						{% block object_title %}{% endblock %}
+					</h1>
+					<ul class="blog__info">
+						<li><span class="glyphicon glyphicon-user"></span>&nbsp;{% block object_author %}{%endblock %}</li>
+						<li><i class="glyphicon glyphicon-calendar"></i>&nbsp;{% block object_created_at %}{% endblock %}</li>
+					</ul>
+				</div>
+				<div class="blog__body">
+					<p>
+					{% autoescape off %}
+						{% block object_content %}{% endblock %}
+					{% endautoescape %}
+
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
 {% endblock detail %}

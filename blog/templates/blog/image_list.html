@@ -1,1 +1,40 @@
 {% extends "blog/base.html" %}
+{% load staticfiles %}
+{% load thumbnail %}
+{% load hitcount_tags %}
+
+{% block list %}
+<div class="container blog col-md-42" style="margin-top:50px;">
+{% for article in page_obj %}
+		<div class="{% cycle 'col-md-offset-6 col-md-10' 'col-md-10' 'col-md-10' %}">
+			<p>
+			{% block atag_start %}{% endblock atag_start %}
+				{% thumbnail article.image "520x360" crop="center" as im %}
+    			<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="img-responsive minmax">
+				{% endthumbnail %}
+			</p>
+			<dl class="text-center lightgraybg">
+				<dt>
+					{{ article.title }}
+				</dt>
+				<dd>
+					{{ article.updated_at }}
+				</dd>
+			</dl>
+		{% block atag_end %}{% endblock atag_end %}
+				{% block admin %}
+				{% endblock %}
+		</div>
+{% endfor %}
+	</div>
+
+
+
+
+	{% include "blog/paginator.html" %}
+
+	{% block create_article %}
+	{% endblock %}
+
+
+{% endblock %}

@@ -1,1 +1,54 @@
 {% extends "blog/image_list.html" %}
+{% load staticfiles %}
+
+{% block semi_title %}
+	전후사진
+{% endblock semi_title %}
+
+{% block sub_title %}
+	커뮤니티 > 전후사진
+{% endblock sub_title %}
+
+{% block main %}
+	<img src="{% static 'img/community/bf.jpg' %}" class="img-responsive content-border1 paddingtop60">
+{% endblock main %}
+
+{% block mainsm %}
+	<img src="{% static 'img/community/bfsm.jpg' %}" class="img-responsive content-border1 paddingtop30-xs">
+{% endblock mainsm %}
+
+{% block atag_start %}
+		<a href="{% url 'blog:beforeafter_detail' pk=article.pk %}">
+{% endblock atag_start %}
+
+{% block atag_end %}
+		</a>
+{% endblock atag_end %}
+
+{% block admin %}
+		<div class="col-md-42" style="margin-bottom: 40px;">
+		{% if user.is_authenticated %}
+				<form action="{% url 'blog:beforeafter_hide' pk=article.pk %}" method="post" class="col-md-21 text-center" >
+					{% csrf_token %}
+				{% if article.show %}
+					<input type="submit" class="button" value="hide">
+				{% else %}
+					<input type="submit" class="button" value="show">
+				{% endif %}
+				</form>
+				<form action="{% url 'blog:beforeafter_delete' pk=article.pk %}" method="post" class="col-md-21 text-center" >
+					{% csrf_token %}
+					<input type="button" value="delete" onclick="javascript:if(confirm('삭제하시겠습니까?')) {this.form.submit();} else {return;}">
+				</form>
+		{% endif %}
+		</div>
+
+{% endblock admin %}
+
+{% block create_article %}
+	{% if user.is_authenticated %}
+		<div class="text-right col-sm-14">
+			<a href="{% url 'blog:beforeafter_create' %}">New Post</a>
+		</div>
+	{% endif %}
+{% endblock %}

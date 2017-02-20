@@ -1,1 +1,29 @@
-{% extends "blog/beforafter_list.html" %}
+{% extends "blog/beforeafter_list.html" %}
+
+{% block detail %}
+<div class = "container">
+	<div class="row">
+		<div class="col-md-36 col-sm-36 col-md-offset-3">
+			<div class="bolg__item">
+				<div class="blog__header">
+					<h1 class="blog__title">
+						{{ object.title }}
+					</h1>
+					<ul class="blog__info">
+						<li><span class="glyphicon glyphicon-user"></span>&nbsp;{{ object.author }}</li>
+						<li><i class="glyphicon glyphicon-calendar"></i>&nbsp;{{ object.updated_at}}</li>
+					</ul>
+				</div>
+				<div class="blog__body">
+					<p>
+					{% autoescape off %}
+						{{ object.content|safe }}
+					{% endautoescape %}
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

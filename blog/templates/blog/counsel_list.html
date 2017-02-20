@@ -21,8 +21,10 @@ HOME > 커뮤니티 > 온라인 상담
 	<a href="{% url 'blog:counsel_detail' pk=article.pk %}">
 {% endblock atag %}
 
-{% if user.is_authenticated %}
-	{% block create_article %}
-	<a href="{% url 'blog:counsel_create' %}">새 글쓰기</a>
-	{% endblock %}
-{% endif %}
+
+{% block create_article %}
+	{% if user.is_authenticated %}
+		<a href="{% url 'blog:counsel_create' %}">새 글쓰기</a>
+	{% endif %}
+{% endblock %}
+

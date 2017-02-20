@@ -53,7 +53,7 @@ class CustomDetailView(HitCountDetailView):
 
 
 class CustomCreateView(LoginRequiredMixin, CreateView):
-    template_name = 'blog_new.html'
+    template_name = 'blog/blog_new.html'
 
     def form_valid(self, form):
         instance = form.save(commit=False)
@@ -86,7 +86,6 @@ class NoticeDetail(CustomDetailView):
 
 class NoticeCreate(CustomCreateView):
     model = Notice
-    template_name = 'blog/notice_create.html'
     form_class = NoticeForm
 
 
@@ -112,7 +111,6 @@ class ReviewDetail(CustomDetailView):
 
 class ReviewCreate(CustomCreateView):
     model = Review
-    template_name = 'blog/review_create.html'
     form_class = ReviewForm
 
 
@@ -138,7 +136,6 @@ class BeforeAfterDetail(CustomDetailView):
 
 class BeforeAfterCreate(CustomCreateView):
     model = BeforeAfter
-    template_name = 'blog/beforeafter_create.html'
     form_class = BeforeAfterForm
 
 
@@ -164,7 +161,6 @@ class CounselDetail(CustomDetailView):
 
 class CounselCreate(CustomCreateView):
     model = Counsel
-    template_name = 'blog/counsel_create.html'
     form_class = CounselForm
 
 

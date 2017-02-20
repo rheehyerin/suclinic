@@ -1,6 +1,7 @@
 {% extends "blog/list.html" %}
 {% load staticfiles %}
 
+
 {% block semi_title %}
 고객 후기
 {% endblock semi_title %}
@@ -21,8 +22,9 @@ HOME > 커뮤니티 > 고객 후기
 	<a href="{% url 'blog:review_detail' pk=article.pk %}">
 {% endblock atag %}
 
-{% if user.is_authenticated %}
-	{% block create_article %}
+{% block create_article %}
+	{% if user.is_authenticated %}
 		<a href="{% url 'blog:review_create' %}">새 글쓰기</a>
-	{% endblock %}
-{% endif %}
+	{% endif %}
+{% endblock %}
+

@@ -4,7 +4,7 @@
 
 <!-- list -->
 {% block list %}
-<div class="container blog" style="margin-top: 50px;">
+<div class="container blog col-md-42" style="margin-top: 50px;">
 	<div class="col-md-34 col-sm-42 col-md-offset-4">
 		<table class="table">
 			<tr>
@@ -20,8 +20,9 @@
 					{# <!-- <td>{{ forloop.revcounter|multiply_add:page_obj.number|one_more:page_obj.paginator.page_range }}</td> --> #}
 					<td>{{ article.pk }}</td>
 					<td class="title col-sm-21">
-					{% block atag %} {% endblock atag %}
+					{% block atag %}{% endblock atag %}
 						{{ article.title }}
+
 					</a>
 					</td>
 					<td class="hidden-xs">{{ article.updated_at }}</td>
