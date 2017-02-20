@@ -1,6 +1,23 @@
 {% extends "../detailpage.html" %}
 {% load staticfiles %}
 
+
+{% block semi_title %}
+수클리닉 소개
+{% endblock %}
+
+{% block sub_title %}
+HOME > 병원소개 > 수클리닉 소개
+{% endblock %}
+
+{% block main %}
+	<img src="{% static 'img/intro/intro1.jpg' %}" class="img-responsive content-border1 paddingtop60">
+{% endblock %}
+
+{% block mainsm %}
+	<img src="{% static 'img/intro/intro1s.jpg' %}" class="img-responsive content-border1 paddingtop30-xs">
+{% endblock %}
+
 {% block javascript %}
 <script type="text/javascript">
 	$(document).ready(function(){
