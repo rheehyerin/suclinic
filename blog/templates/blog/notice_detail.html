@@ -13,6 +13,9 @@
 					<ul class="blog__info">
 						<li><span class="glyphicon glyphicon-user"></span>&nbsp;{{ object.author }}</li>
 						<li><i class="glyphicon glyphicon-calendar"></i>&nbsp;{{ object.updated_at}}</li>
+						{% if object.author == request.user %}
+							<li><a href="{% url 'blog:notice_update' pk=object.pk %}" class="btn btn-xs btn-info">수정</a></li>
+						{% endif %}
 					</ul>
 				</div>
 				<div class="blog__body">
