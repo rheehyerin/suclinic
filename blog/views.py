@@ -78,10 +78,6 @@ class CustomEditView(LoginRequiredMixin, UpdateView):
     fields = ['title', 'content']
     template_name = 'blog/blog_new.html'
 
-class CustomEditView2(LoginRequiredMixin, UpdateView):
-    fields = ['title', 'content', 'image']
-    template_name = 'blog/blog_new.html'
-
 
 class NoticeList(CustomListView):
     model = Notice
@@ -165,7 +161,9 @@ class BeforeAfterDelete(LoginRequiredMixin, DeleteView):
     model = BeforeAfter
     success_url = reverse_lazy('blog:beforeafter_list')
 
-class BeforeAfterUpdate(CustomEditView2):
+
+class BeforeAfterUpdate(CustomEditView):
+    fields = ['title', 'content', 'image']
     model = BeforeAfter
 
 
