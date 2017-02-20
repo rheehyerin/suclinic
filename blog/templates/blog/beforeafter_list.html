@@ -26,19 +26,19 @@
 {% endblock atag_end %}
 
 {% block admin %}
-		<div class="col-md-42" style="margin-bottom: 40px;">
+		<div class="col-xs-42 no-padding" style="margin-bottom: 40px;">
 		{% if user.is_staff %}
-				<form action="{% url 'blog:beforeafter_hide' pk=article.pk %}" method="post" class="col-md-21 text-center" >
+				<form action="{% url 'blog:beforeafter_hide' pk=article.pk %}" method="post" class="col-xs-21 text-center no-padding" >
 					{% csrf_token %}
 				{% if article.show %}
-					<input type="submit" class="button" value="hide">
+					<input type="submit" class="button" value="숨김">
 				{% else %}
-					<input type="submit" class="button" value="show">
+					<input type="submit" class="button" value="게시">
 				{% endif %}
 				</form>
-				<form action="{% url 'blog:beforeafter_delete' pk=article.pk %}" method="post" class="col-md-21 text-center" >
+				<form action="{% url 'blog:beforeafter_delete' pk=article.pk %}" method="post" class="col-xs-21 text-center no-padding" >
 					{% csrf_token %}
-					<input type="button" value="delete" onclick="javascript:if(confirm('삭제하시겠습니까?')) {this.form.submit();} else {return;}">
+					<input type="button" value="삭제" onclick="javascript:if(confirm('삭제하시겠습니까?')) {this.form.submit();} else {return;}">
 				</form>
 		{% endif %}
 		</div>

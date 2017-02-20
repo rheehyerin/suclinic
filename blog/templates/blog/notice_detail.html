@@ -15,6 +15,10 @@
 						<li><i class="glyphicon glyphicon-calendar"></i>&nbsp;{{ object.updated_at}}</li>
 						{% if object.author == request.user %}
 							<li><a href="{% url 'blog:notice_update' pk=object.pk %}" class="btn btn-xs btn-info">수정</a></li>
+							<li><form action="{% url 'blog:notice_delete' pk=object.pk %}" method="post" class="text-center" >
+								{% csrf_token %}
+								<input type="button" class="btn btn-xs btn-info" value="삭제" onclick="javascript:if(confirm('삭제하시겠습니까?')) {this.form.submit();} else {return;}">
+							</form></li>
 						{% endif %}
 					</ul>
 				</div>

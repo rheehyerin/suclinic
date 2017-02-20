@@ -4,9 +4,9 @@
 {% load hitcount_tags %}
 
 {% block list %}
-<div class="container blog col-md-42" style="margin-top:50px;">
+<div class="container blog col-md-42 no-padding-xs" style="margin-top:50px;">
 {% for article in page_obj %}
-		<div class="{% cycle 'col-md-offset-6 col-md-10' 'col-md-10' 'col-md-10' %}">
+		<div class="{% cycle 'col-md-offset-6 col-md-10 col-sm-14 col-xs-21 no-padding-xs' 'col-md-10 col-sm-14 col-xs-21 no-padding-xs' 'col-md-10 col-sm-14 col-xs-21 no-padding-xs' %}">
 			<p>
 			{% block atag_start %}{% endblock atag_start %}
 				{% thumbnail article.image "520x360" crop="center" as im %}
