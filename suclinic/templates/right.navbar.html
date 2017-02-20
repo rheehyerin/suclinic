@@ -14,9 +14,8 @@
 						{% else %}
 							<li style="color: white;"><a href="{% url 'accounts:login' %}">LOG IN</a></li>
 						{% endif %}
-						<li><a href="#"><img src="{% static 'img/right_tel.png' %}" class="img-responsive"></a></li>
-						<li><a href="#"><img src="{% static 'img/right_counsel.png' %}" class="img-responsive"></a></li>
-						<li><a href="#"><img src="{% static 'img/right_kakao.png' %}" class="img-responsive"></a></li>
+						<li><a href="{% url 'main:map' %}"><img src="{% static 'img/right_tel.png' %}" class="img-responsive" style="width:30px; height:auto;"></a></li>
+						<li><a href="{% url 'blog:counsel_list' %}"><img src="{% static 'img/right_counsel.png' %}" class="img-responsive" style="width:30px; height:auto;"></a></li>
 						</ul>
 					</div>
 				</div>
