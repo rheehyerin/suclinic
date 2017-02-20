@@ -27,7 +27,7 @@
 
 {% block admin %}
 		<div class="col-md-42" style="margin-bottom: 40px;">
-		{% if user.is_authenticated %}
+		{% if user.is_staff %}
 				<form action="{% url 'blog:beforeafter_hide' pk=article.pk %}" method="post" class="col-md-21 text-center" >
 					{% csrf_token %}
 				{% if article.show %}
@@ -46,9 +46,9 @@
 {% endblock admin %}
 
 {% block create_article %}
-	{% if user.is_authenticated %}
+	{% if user.is_staff %}
 		<div class="text-right col-sm-14">
-			<a href="{% url 'blog:beforeafter_create' %}">New Post</a>
+			<a href="{% url 'blog:beforeafter_create' %}">새 글쓰기</a>
 		</div>
 	{% endif %}
 {% endblock %}

@@ -250,6 +250,9 @@ html, body {
 .paddingbottom60 {
   padding-bottom: 60px; }
 
+.lightgraybg {
+  background-color: lightgray; }
+
 /* margin and padding when it is xs */
 @media (max-width: 767px) {
   .margintop30, .margintop50, .margintop60, .margintop80 {
