@@ -7,12 +7,12 @@
 						<ul class="nav navbar-nav">
 						<li style="margin-top: 20px;"><a href="#" id="top"><img src="{% static 'img/right_top.png' %}" class="img-responsive"></a></li>
 						{% if not user.is_authenticated %}
-							<li><a href="{% url 'accounts:signup' %}" style="font-weight: 500;color: white;">JOIN</a></li>
+							<li><a href="{% url 'accounts:signup' %}" style="font-weight: 500;color: white;font-size: 0.8em;">JOIN</a></li>
 						{% endif %}
 						{% if user.is_authenticated %}
-							<li><a href="{% url 'accounts:logout' %}" style="font-weight: 500;color: white;">LOG OUT</a></li>
+							<li><a href="{% url 'accounts:logout' %}" style="font-weight: 500;color: white;font-size: 0.8em;">LOG<br>OUT</a></li>
 						{% else %}
-							<li><a href="{% url 'accounts:login' %}" style="font-weight: 500;color: white;">LOG IN</a></li>
+							<li><a href="{% url 'accounts:login' %}" style="font-weight: 500;color: white;font-size: 0.8em;">LOG IN</a></li>
 						{% endif %}
 						<li><a href="{% url 'main:map' %}"><img src="{% static 'img/right_tel.png' %}" class="img-responsive" style="width:30px; height:auto;"></a></li>
 						<li><a href="{% url 'blog:counsel_list' %}"><img src="{% static 'img/right_counsel.png' %}" class="img-responsive" style="width:30px; height:auto;"></a></li>
