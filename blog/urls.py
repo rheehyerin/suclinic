@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^notice/(?P<pk>\d+)/$', views.NoticeDetail.as_view(), name="notice_detail"),
     url(r'^notice/delete/(?P<pk>\d+)/$', views.NoticeDelete.as_view(), name="notice_delete"),
     url(r'^notice/hide/(?P<pk>\d+)/$', views.NoticeHide.as_view(), name="notice_hide"),
+    url(r'^notice/edit/(?P<pk>\d+)/$', views.NoticeUpdate.as_view(), name="notice_update"),
     url(r'^notice/new/$', views.NoticeCreate.as_view(), name="notice_create"),
     url(r'^notice/$', views.NoticeList.as_view(), name="notice_list"),
 

@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.http import Http404
 
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView, DeleteView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from hitcount.views import HitCountDetailView
 
@@ -74,6 +74,11 @@ class CustomHideView(LoginRequiredMixin, ListView):
         return self.get(request, *args, **kwargs)
 
 
+class CustomEditView(LoginRequiredMixin, UpdateView):
+    fields = ['title', 'content']
+    template_name = 'blog/blog_new.html'
+
+
 class NoticeList(CustomListView):
     model = Notice
     template_name = 'blog/notice_list.html'
@@ -97,6 +102,10 @@ class NoticeHide(CustomHideView):
 class NoticeDelete(LoginRequiredMixin, DeleteView):
     model = Notice
     success_url = reverse_lazy('blog:notice_list')
+
+
+class NoticeUpdate(CustomEditView):
+    model = Notice
 
 
 class ReviewList(CustomListView):
@@ -124,6 +133,10 @@ class ReviewDelete(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('blog:review_list')
 
 
+class ReviewUpdate(CustomEditView):
+    model = Review
+
+
 class BeforeAfterList(CustomListView):
     model = BeforeAfter
     template_name = 'blog/beforeafter_list.html'
@@ -145,7 +158,7 @@ class BeforeAfterHide(CustomHideView):
 
 
 class BeforeAfterDelete(LoginRequiredMixin, DeleteView):
-    model = Notice
+    model = BeforeAfter
     success_url = reverse_lazy('blog:beforeafter_list')
 
 
@@ -170,5 +183,9 @@ class CounselHide(CustomHideView):
 
 
 class CounselDelete(LoginRequiredMixin, DeleteView):
-    model = Notice
+    model = Counsel
     success_url = reverse_lazy('blog:counsel_list')
+
+
+class CounselUpdate(CustomEditView):
+    model = Counsel
