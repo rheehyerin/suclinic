@@ -186,7 +186,11 @@ body {
 	> li {
 		> a {
 			font-size: 11pt;
+			font-weight: 400;
 		}
+	}
+	ul a {
+		font-weight:300;
 	}
 }
 

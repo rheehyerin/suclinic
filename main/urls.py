@@ -2,6 +2,11 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    url(r'^intro/$', views.intro, name="intro"),
+    url(r'^doctor/$', views.doctor, name="doctor"),
+    url(r'^clinic/$', views.clinic, name="clinic"),
+    url(r'^map/$', views.map, name="map"),
+
     # whitening #
     url(r'^whitening/$', views.whitening, name="whitening"),
     url(r'^laser/$', views.laser, name="laser"),
@@ -48,8 +53,6 @@ urlpatterns = [
     url(r'^lipolysis/$', views.lipolysis, name="lipolysis"),
     url(r'^mesotherapie/$', views.mesotherapie, name="mesotherapie"),
     url(r'^slim/$', views.slim, name="slim"),
-
-    url(r'^map/$', views.map, name="map"),
 
     url(r'^$', views.main, name="main"),
 ]

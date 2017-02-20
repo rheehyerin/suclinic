@@ -3,6 +3,18 @@ from django.shortcuts import render
 def main(request):
     return render(request, "main.html")
 
+def intro(request):
+    return render(request, "intro/intro.html")
+
+def clinic(request):
+    return render(request, "intro/clinic.html")
+
+def doctor(request):
+    return render(request, "intro/doctor.html")
+
+def map(request):
+    return render(request, "intro/map.html", {'map': True})
+
 # whitening #
 def whitening(request):
     return render(request, "whitening/whitening.html")
@@ -104,6 +116,4 @@ def mesotherapie(request):
 def slim(request):
     return render(request, "obesity/slim.html")
 
-def map(request):
-    return render(request, "map.html", {'map': True})
 
