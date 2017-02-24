@@ -6,7 +6,7 @@
 			<ul>
 				<li class="col-sm-8"><img src="{% static 'img/footer_1.png' %}" class="img-responsive minmax"></li>
 				<li class="col-sm-8"><img src="{% static 'img/footer_2.png' %}" class="img-responsive minmax"></li>
-				<li class="col-sm-8 "><a href="#"><img src="{% static 'img/footer_3.png' %}" class="img-responsive minmax"></a></li>
+				<li class="col-sm-8 "><a href="{% url 'main:map' %}"><img src="{% static 'img/footer_3.png' %}" class="img-responsive minmax"></a></li>
 				<li class="col-sm-8 "><a href="#"><img src="{% static 'img/footer_4.png' %}" class="img-responsive minmax"></a></li>
 				<li class="col-sm-10" style="border-left:1px solid gray; margin-top:15px;"><img src="{% static 'img/footer_5.png' %}" class="img-responsive minmax">
 					<ul class="footer_nav center-text" style="float: right; margin-right:15px;">
@@ -20,7 +20,7 @@
 			<div class="col-xs-42 visible-xs no-padding bgcolorblk" style="padding-top:10px; display: none;">
 				<div class="col-xs-21 no-padding" style="border-right:1px solid gray;">
 					<img src="{% static 'img/footer_m_1.jpg' %}" class="img-responsive col-xs-42 minmax no-padding">
-					<img src="{% static 'img/footer_m_3.jpg' %}" class="img-responsive col-xs-42 minmax no-padding">
+					<a href="{% url 'main:map' %}"><img src="{% static 'img/footer_m_3.jpg' %}" class="img-responsive col-xs-42 minmax no-padding"></a>
 				</div>
 				<div class="col-xs-21 no-padding">
 					<img src="{% static 'img/footer_m_2.jpg' %}" class="img-responsive col-xs-42 minmax no-padding">
