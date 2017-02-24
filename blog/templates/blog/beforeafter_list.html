@@ -52,3 +52,12 @@
 		</div>
 	{% endif %}
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		console.log('hi');
+		activelist('#community2', '#community')
+	});
+</script>
+{% endblock javascript %}
