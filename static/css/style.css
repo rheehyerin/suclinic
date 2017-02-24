@@ -378,6 +378,10 @@ footer ul {
   min-height: 1px;
   width: 3.5%;
   float: left; }
+  .right-navbar .navbar-fixed-side .navbar-nav > li > #top {
+    background-color: black; }
+  .right-navbar .navbar-fixed-side .navbar-nav > li > a:hover {
+    background-color: black; }
 
 footer .footer_nav > li > a {
   font-size: 6pt;

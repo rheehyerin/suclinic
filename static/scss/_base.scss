@@ -264,6 +264,12 @@ footer{
 	min-height: 1px;
 	width: 3.5%;
 	float: left;
+	.navbar-fixed-side .navbar-nav>li>#top{
+		background-color:black;
+	}
+	.navbar-fixed-side .navbar-nav>li>a:hover{
+		background-color:black;
+	}
 }
 footer{
 	.footer_nav>li>a{
